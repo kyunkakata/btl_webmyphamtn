@@ -6,8 +6,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 body{
 	margin:0;
-	padding:0;
-	background:#fff;
+    padding:0;
+    background-color: #000;
 	font-family: 'Noto Sans', sans-serif;
  }
 body a{
@@ -178,13 +178,13 @@ img.img-head {
 .logo h1{
    font-family: 'Montserrat', sans-serif;
     font-size: 3em;
-    color: #000;
+    color: #fff;
 	display: inline-block;
 	position:relative;
 }
 .logo h1 a{
     text-decoration:none;
-    color: #000;
+    color: #fff;
 }
 .logo h1 span {
     font-size: 12px;
