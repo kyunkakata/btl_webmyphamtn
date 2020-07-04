@@ -489,6 +489,7 @@ span.fa.fa-shopping-cart.my-cart-icon {
 .search-form {
     width: 55%;
     margin: 0 auto;
+    margin-top: 50px;
 }
 .search-form input[type='text']{
 	width: 93%;
@@ -545,6 +546,7 @@ span.fa.fa-shopping-cart.my-cart-icon {
     margin: 0 auto;
     width: 20%;
     position: relative;
+    background-color: #000;
 }
 .ser-t b{
 	width: 100%;
@@ -561,7 +563,7 @@ span.fa.fa-shopping-cart.my-cart-icon {
 	width: 40px;
     height: 40px;
     display: block;
-    background: #fff;
+    background: #000;
     position: absolute;
     top: -7px;
     left: 42%;  
@@ -628,7 +630,6 @@ ul.nav.tabs {
     color: #FAB005;
 }
 .mid-2 p{
-	float:left;
 	font-size:0.9em;
 	color:#B4B4B4;
 }
@@ -655,6 +656,7 @@ ul.nav.tabs {
 .col-m {
     padding: 1em;
     border: 1px solid #B2B2B2;
+    background-color: #f0f0f0;
 }
 .offer-img{
 	position:relative;
@@ -997,7 +999,7 @@ ul.product-qty {
 /*--causel--*/
 .carousel-indicators {
     position: absolute;
-    bottom: -45px;
+    bottom: -85px;
     left: 48%;
     z-index: 15;
 	width: auto;
@@ -2274,7 +2276,9 @@ span.last {
 }
 .search-form {
     width: 60%;
-    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 10px;
+
 }
 .main-agileits {
     width: 50%;
@@ -2368,6 +2372,7 @@ p.fo-para {
 }
 .search-form {
     width: 70%;
+    margin-top: 50px;
 }
 .carousel-indicators {
     left: 46%;
@@ -2559,12 +2564,14 @@ ul.multi-column-dropdown {
 .search-form {
     width: 76%;
     margin: 0 auto;
+    margin-top: 50px;
 }
 .banner-info {
     margin: 5em 0;
 }
 .search-form {
     width: 76%;
+    margin-top: 50px;
 }
 .agileinf {
     padding-top: 0em;
@@ -2660,6 +2667,7 @@ a.at-in {
 }
 .search-form {
     width: 93%;
+    margin-top: 50px;
 }
 .banner-info {
     margin: 4em 0;
@@ -2903,6 +2911,7 @@ img.img-head {
 }
 .search-form {
     width: 95%;
+    margin-top: 50px;
 }
 .spec h3 {
     font-size: 1.7em;

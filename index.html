@@ -120,21 +120,21 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		</div>
 	</div>
 	<!---->
-	<div data-vide-bg="video/video">
+	<!-- <div data-vide-bg="video/video">
 		<div class="container">
 			<div class="banner-info">
 				<h3>It is a long established fact that a reader will be distracted by
 					the readable </h3>
-				<div class="search-form">
-					<form action="#" method="post">
-						<input type="text" placeholder="Search..." name="Search...">
-						<input type="submit" value=" ">
-					</form>
-				</div>
+				
 			</div>
 		</div>
+	</div> -->
+	<div class="search-form">
+		<form action="#" method="post">
+			<input type="text" placeholder="Tìm kiếm sản phẩm theo tên, thương hiệu..." name="Search...">
+			<input type="submit" value=" ">
+		</form>
 	</div>
-
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
 	<script src="js/jquery.vide.min.js"></script>
 
@@ -142,7 +142,6 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<div class="content-top ">
 		<div class="container ">
 			<div class="spec ">
-				<h3>Special Offers</h3>
 				<div class="ser-t">
 					<b></b>
 					<span><i></i></span>
@@ -152,38 +151,44 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			<div class="tab-head ">
 				<nav class="nav-sidebar">
 					<ul class="nav tabs ">
-						<li class="active"><a href="#tab1" data-toggle="tab">Staples</a></li>
-						<li class=""><a href="#tab2" data-toggle="tab">Snacks</a></li>
-						<li class=""><a href="#tab3" data-toggle="tab">Fruits & Vegetables</a></li>
-						<li class=""><a href="#tab4" data-toggle="tab">Breakfast & Cereal</a></li>
+						<li class="active"><a href="#tab1" data-toggle="tab">Bán chạy</a></li>
+						<li class=""><a href="#tab2" data-toggle="tab">Sản phẩm mới</a></li>
+						<li class=""><a href="#tab3" data-toggle="tab">Thương hiệu nổi tiếng</a></li>
 					</ul>
 				</nav>
+				<!-- TODO: fix data here -->
 				<div class=" tab-content tab-content-t ">
 					<div class="tab-pane active text-style" id="tab1">
 						<div class=" con-w3l">
 							<div class="col-md-3 m-wthree">
+								<!-- TODO: This is base product infomation -->
 								<div class="col-m">
 									<a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img">
-										<img src="images/of.png" class="img-responsive" alt="">
+										<img
+											src="http://myphamthainguyen.vn/media/catalog/product/cache/1/small_image/260x260/8edc98e65442fea70c4ccd9d62a6e84e/b/e/beautyday-mat-na-ngu-innisfree-whitening-pore-sleeping-pack-.jpg"
+											class="img-responsive" alt="" width="auto" height="auto">
 										<div class="offer">
-											<p><span>Offer</span></p>
+											<p><span>Bán chạy</span></p>
 										</div>
 									</a>
 									<div class="mid-1">
 										<div class="women">
-											<h6><a href="single.html">Moong</a>(1 kg)</h6>
+											<h6><a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img">Moong</a></h6>
 										</div>
 										<div class="mid-2">
-											<p><label>$2.00</label><em class="item_price">$1.50</em></p>
-											<div class="block">
-												<div class="starbox small ghosting"> </div>
-											</div>
+											<p>
+												<!-- <label>$2.00</label> -->
+												<em class="item_price">10.000.000 đ</em>
+												<em class="item_bought_amount" style="float: right;">16 lượt đã mua</em>
+											</p>
 											<div class="clearfix"></div>
 										</div>
+										<!-- TODO: Fix data add to cart here -->
 										<div class="add">
 											<button class="btn btn-danger my-cart-btn my-cart-b " data-id="1" data-name="Moong"
-												data-summary="summary 1" data-price="1.50" data-quantity="1" data-image="images/of.png">Add to
-												Cart</button>
+												data-summary="summary 1" data-price="10000000" data-quantity="1" data-image="images/of.png">Thêm
+												vào
+												giỏ hàng</button>
 										</div>
 
 									</div>
@@ -210,8 +215,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										</div>
 										<div class="add">
 											<button class="btn btn-danger my-cart-btn my-cart-b" data-id="2" data-name="Sunflower Oil"
-												data-summary="summary 2" data-price="9.00" data-quantity="1" data-image="images/of1.png">Add to
-												Cart</button>
+												data-summary="summary 2" data-price="9.00" data-quantity="1" data-image="images/of1.png">Thêm
+												vào giỏ hàng</button>
 										</div>
 									</div>
 								</div>
@@ -237,8 +242,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										</div>
 										<div class="add">
 											<button class="btn btn-danger my-cart-btn my-cart-b" data-id="3" data-name="Kabuli Chana"
-												data-summary="summary 3" data-price="2.00" data-quantity="1" data-image="images/of2.png">Add to
-												Cart</button>
+												data-summary="summary 3" data-price="2.00" data-quantity="1" data-image="images/of2.png">Thêm
+												vào giỏ hàng</button>
 										</div>
 									</div>
 								</div>
@@ -264,8 +269,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										</div>
 										<div class="add">
 											<button class="btn btn-danger my-cart-btn my-cart-b" data-id="4" data-name="Soya Chunks"
-												data-summary="summary 4" data-price="3.50" data-quantity="1" data-image="images/of3.png">Add to
-												Cart</button>
+												data-summary="summary 4" data-price="3.50" data-quantity="1" data-image="images/of3.png">Thêm
+												vào giỏ hàng</button>
 										</div>
 									</div>
 								</div>
@@ -296,8 +301,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										</div>
 										<div class="add">
 											<button class="btn btn-danger my-cart-btn my-cart-b" data-id="5" data-name="Lays"
-												data-summary="summary 5" data-price="0.70" data-quantity="1" data-image="images/of4.png">Add to
-												Cart</button>
+												data-summary="summary 5" data-price="0.70" data-quantity="1" data-image="images/of4.png">Thêm
+												vào giỏ hàng</button>
 										</div>
 									</div>
 								</div>
@@ -323,8 +328,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										</div>
 										<div class="add">
 											<button class="btn btn-danger my-cart-btn my-cart-b" data-id="6" data-name="Kurkure"
-												data-summary="summary 6" data-price="0.70" data-quantity="1" data-image="images/of5.png">Add to
-												Cart</button>
+												data-summary="summary 6" data-price="0.70" data-quantity="1" data-image="images/of5.png">Thêm
+												vào giỏ hàng</button>
 										</div>
 									</div>
 								</div>
@@ -350,8 +355,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										</div>
 										<div class="add">
 											<button class="btn btn-danger my-cart-btn my-cart-b" data-id="7" data-name="Popcorn"
-												data-summary="summary 7" data-price="1.00" data-quantity="1" data-image="images/of6.png">Add to
-												Cart</button>
+												data-summary="summary 7" data-price="1.00" data-quantity="1" data-image="images/of6.png">Thêm
+												vào giỏ hàng</button>
 										</div>
 									</div>
 								</div>
@@ -377,8 +382,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										</div>
 										<div class="add">
 											<button class="btn btn-danger my-cart-btn my-cart-b" data-id="8" data-name="Nuts"
-												data-summary="summary 8" data-price="3.50" data-quantity="1" data-image="images/of7.png">Add to
-												Cart</button>
+												data-summary="summary 8" data-price="3.50" data-quantity="1" data-image="images/of7.png">Thêm
+												vào giỏ hàng</button>
 										</div>
 									</div>
 								</div>
@@ -409,8 +414,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										</div>
 										<div class="add">
 											<button class="btn btn-danger my-cart-btn my-cart-b" data-id="9" data-name="Banana"
-												data-summary="summary 9" data-price="1.50" data-quantity="1" data-image="images/of8.png">Add to
-												Cart</button>
+												data-summary="summary 9" data-price="1.50" data-quantity="1" data-image="images/of8.png">Thêm
+												vào giỏ hàng</button>
 										</div>
 									</div>
 								</div>
@@ -436,8 +441,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 										</div>
 										<div class="add">
 											<button class="btn btn-danger my-cart-btn my-cart-b" data-id="10" data-name="Onion"
-												data-summary="summary 10" data-price="0.70" data-quantity="1" data-image="images/of9.png">Add to
-												Cart</button>
+												data-summary="summary 10" data-price="0.70" data-quantity="1" data-image="images/of9.png">Thêm
+												vào giỏ hàng</button>
 										</div>
 									</div>
 								</div>
@@ -618,63 +623,10 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		</div>
 	</div>
 	</div>
-
-	<!--content-->
-	<div class="content-mid">
-		<div class="container">
-
-			<div class="col-md-4 m-w3ls">
-				<div class="col-md1 ">
-					<a href="kitchen.html">
-						<img src="images/co1.jpg" class="img-responsive img" alt="">
-						<div class="big-sa">
-							<h6>New Collections</h6>
-							<h3>Season<span>ing </span></h3>
-							<p>There are many variations of passages of Lorem Ipsum available, but the majority </p>
-						</div>
-					</a>
-				</div>
-			</div>
-			<div class="col-md-4 m-w3ls1">
-				<div class="col-md ">
-					<a href="hold.html">
-						<img src="images/co.jpg" class="img-responsive img" alt="">
-						<div class="big-sale">
-							<div class="big-sale1">
-								<h3>Big <span>Sale</span></h3>
-								<p>It is a long established fact that a reader </p>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-			<div class="col-md-4 m-w3ls">
-				<div class="col-md2 ">
-					<a href="kitchen.html">
-						<img src="images/co2.jpg" class="img-responsive img1" alt="">
-						<div class="big-sale2">
-							<h3>Cooking <span>Oil</span></h3>
-							<p>It is a long established fact that a reader </p>
-						</div>
-					</a>
-				</div>
-				<div class="col-md3 ">
-					<a href="hold.html">
-						<img src="images/co3.jpg" class="img-responsive img1" alt="">
-						<div class="big-sale3">
-							<h3>Vegeta<span>bles</span></h3>
-							<p>It is a long established fact that a reader </p>
-						</div>
-					</a>
-				</div>
-			</div>
-			<div class="clearfix"></div>
-		</div>
-	</div>
-	<!--content-->
+	<div class="separator" style="margin-top: 50px;" />
 	<!-- Carousel
     ================================================== -->
-	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<div id="myCarousel" class="carousel-slide" data-ride="carousel">
 		<!-- Indicators -->
 		<ol class="carousel-indicators">
 			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -683,16 +635,18 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		</ol>
 		<div class="carousel-inner" role="listbox">
 			<div class="item active">
-				<a href="kitchen.html"> <img class="first-slide" src="images/ba.jpg" alt="First slide"></a>
+				<a href="kitchen.html"> <img class="first-slide" src="http://myphamthainguyen.vn/media/icycle/g/t/gtr.jpg"
+						alt="First slide"></a>
 
 			</div>
 			<div class="item">
-				<a href="care.html"> <img class="second-slide " src="images/ba1.jpg" alt="Second slide"></a>
+				<a href="care.html"> <img class="second-slide " src="http://myphamthainguyen.vn/media/icycle/n/o/noel.png"
+						alt="Second slide"></a>
 
 			</div>
 			<div class="item">
-				<a href="hold.html"><img class="third-slide " src="images/ba2.jpg" alt="Third slide"></a>
-
+				<a href="hold.html"><img class="third-slide " src="http://myphamthainguyen.vn/media/icycle/g/_/g.jpg"
+						alt="Third slide"></a>
 			</div>
 		</div>
 
@@ -702,7 +656,6 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<div class="product">
 		<div class="container">
 			<div class="spec ">
-				<h3>Special Offers</h3>
 				<div class="ser-t">
 					<b></b>
 					<span><i></i></span>
@@ -728,8 +681,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							</div>
 							<div class="add add-2">
 								<button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="product 1"
-									data-summary="summary 1" data-price="6.00" data-quantity="1" data-image="images/of16.png">Add to
-									Cart</button>
+									data-summary="summary 1" data-price="6.00" data-quantity="1" data-image="images/of16.png">Thêm vào giỏ
+									hàng</button>
 							</div>
 						</div>
 					</div>
@@ -752,8 +705,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							</div>
 							<div class="add">
 								<button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="product 1"
-									data-summary="summary 1" data-price="4.50" data-quantity="1" data-image="images/of17.png">Add to
-									Cart</button>
+									data-summary="summary 1" data-price="4.50" data-quantity="1" data-image="images/of17.png">Thêm vào giỏ
+									hàng</button>
 							</div>
 						</div>
 					</div>
@@ -776,8 +729,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							</div>
 							<div class="add">
 								<button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="product 1"
-									data-summary="summary 1" data-price="3.50" data-quantity="1" data-image="images/of18.png">Add to
-									Cart</button>
+									data-summary="summary 1" data-price="3.50" data-quantity="1" data-image="images/of18.png">Thêm vào giỏ
+									hàng</button>
 							</div>
 						</div>
 					</div>
@@ -800,8 +753,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							</div>
 							<div class="add">
 								<button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="product 1"
-									data-summary="summary 1" data-price="0.80" data-quantity="1" data-image="images/of19.png">Add to
-									Cart</button>
+									data-summary="summary 1" data-price="0.80" data-quantity="1" data-image="images/of19.png">Thêm vào giỏ
+									hàng</button>
 							</div>
 						</div>
 					</div>
@@ -825,8 +778,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							</div>
 							<div class="add">
 								<button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="product 1"
-									data-summary="summary 1" data-price="6.00" data-quantity="1" data-image="images/of20.png">Add to
-									Cart</button>
+									data-summary="summary 1" data-price="6.00" data-quantity="1" data-image="images/of20.png">Thêm vào giỏ
+									hàng</button>
 							</div>
 						</div>
 					</div>
@@ -849,8 +802,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							</div>
 							<div class="add">
 								<button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="product 1"
-									data-summary="summary 1" data-price="4.50" data-quantity="1" data-image="images/of21.png">Add to
-									Cart</button>
+									data-summary="summary 1" data-price="4.50" data-quantity="1" data-image="images/of21.png">Thêm vào giỏ
+									hàng</button>
 							</div>
 						</div>
 					</div>
@@ -873,8 +826,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							</div>
 							<div class="add">
 								<button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="product 1"
-									data-summary="summary 1" data-price="3.50" data-quantity="1" data-image="images/of22.png">Add to
-									Cart</button>
+									data-summary="summary 1" data-price="3.50" data-quantity="1" data-image="images/of22.png">Thêm vào giỏ
+									hàng</button>
 							</div>
 						</div>
 					</div>
@@ -897,8 +850,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							</div>
 							<div class="add">
 								<button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="product 1"
-									data-summary="summary 1" data-price="0.80" data-quantity="1" data-image="images/of23.png">Add to
-									Cart</button>
+									data-summary="summary 1" data-price="0.80" data-quantity="1" data-image="images/of23.png">Thêm vào giỏ
+									hàng</button>
 							</div>
 						</div>
 					</div>
@@ -910,64 +863,31 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<!--footer-->
 	<div class="footer">
 		<div class="container">
-			<div class="col-md-3 footer-grid">
-				<h3>About Us</h3>
-				<p>Nam libero tempore, cum soluta nobis est eligendi
-					optio cumque nihil impedit quo minus id quod maxime
-					placeat facere possimus.</p>
-			</div>
-			<div class="col-md-3 footer-grid ">
-				<h3>Menu</h3>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="kitchen.html">Kitchen</a></li>
-					<li><a href="care.html">Personal Care</a></li>
-					<li><a href="hold.html">Household</a></li>
-					<li><a href="codes.html">Short Codes</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-			</div>
-			<div class="col-md-3 footer-grid ">
-				<h3>Customer Services</h3>
-				<ul>
-					<li><a href="shipping.html">Shipping</a></li>
-					<li><a href="terms.html">Terms & Conditions</a></li>
-					<li><a href="faqs.html">Faqs</a></li>
-					<li><a href="contact.html">Contact</a></li>
-					<li><a href="offer.html">Online Shopping</a></li>
 
-				</ul>
-			</div>
-			<div class="col-md-3 footer-grid">
-				<h3>My Account</h3>
-				<ul>
-					<li><a href="login.html">Login</a></li>
-					<li><a href="register.html">Register</a></li>
-					<li><a href="wishlist.html">Wishlist</a></li>
 
-				</ul>
-			</div>
 			<div class="clearfix"></div>
 			<div class="footer-bottom">
-				<h2><a href="index.html"><b>T<br>H<br>E</b>Cửa hàng<span>Mỹ Phẩm Thái Nguyên</span></a></h2>
-				<p class="fo-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-					labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
-				<ul class="social-fo">
-					<li><a href="#" class=" face"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-					<li><a href="#" class=" twi"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-					<li><a href="#" class=" pin"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-					<li><a href="#" class=" dri"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-				</ul>
+				<h2><a href="index.html"><img src="http://myphamthainguyen.vn/media/custom/default/fwxae.png" width="100px"
+							height="100px" style="margin-right: 20px;">Mỹ Phẩm Thái Nguyên</span></a></h2>
+				<p class="fo-para">Trang bán mỹ phẩm chính hãng hàng đầu Thái Nguyên</p>
+
 				<div class=" address">
 					<div class="col-md-4 fo-grid1">
-						<p><i class="fa fa-home" aria-hidden="true"></i>12K Street , 45 Building Road Canada.</p>
+						<p><i class="fa fa-home" aria-hidden="true"></i> Cs1: Số 14, Ngõ 499, Lương Ngọc Quyến, Tp Thái Nguyên
+							0965.666.968</p>
+						<p><i class="fa fa-home" aria-hidden="true"></i>Cs2: Số 140, Đ.Z115, Tp Thái Nguyên 0946.366.968</p>
+						<p><i class="fa fa-home" aria-hidden="true"></i>Cs3: Số 83, Lương Ngọc Quyến, Tp Thái Nguyên 0945.444.968
+						</p>
+						<p><i class="fa fa-home" aria-hidden="true"></i>Cs4: Đối diện cổng KTX 1 Samsung, Phổ Yên, Thái Nguyên
+							0869.828.968</p>
 					</div>
 					<div class="col-md-4 fo-grid1">
-						<p><i class="fa fa-phone" aria-hidden="true"></i>+1234 758 839 , +1273 748 730</p>
+
+
 					</div>
 					<div class="col-md-4 fo-grid1">
-						<p><a href="mailto:info@example.com"><i class="fa fa-envelope-o"
-									aria-hidden="true"></i>info@example1.com</a></p>
+						<p><a href="mailto:hotro@myphamthainguyen.com"><i class="fa fa-envelope-o"
+									aria-hidden="true"></i>hotro@myphamthainguyen.com</a></p>
 					</div>
 					<div class="clearfix"></div>
 
@@ -1024,6 +944,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					});
 				},
 				clickOnAddToCart: function ($addTocart) {
+					console.log('{checkMe} TCL --> targe:', $addTocart);
 					goToCartIcon($addTocart);
 				},
 				getDiscountPrice: function (products) {
@@ -1052,6 +973,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<img src="images/of.png" class="img-responsive" alt="">
 						</div>
 					</div>
+					<!-- TODO: Add description for item -->
 					<div class="col-md-7 span-1 ">
 						<h3>Moong(1 kg)</h3>
 						<p class="in-para"> There are many variations of passages of Lorem Ipsum.</p>
@@ -1060,13 +982,14 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 							<div class="clearfix"></div>
 						</div>
-						<h4 class="quick">Quick Overview:</h4>
+						<h4 class="quick">Mô tả:</h4>
 						<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id
 							quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
 						<div class="add-to">
-							<button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="1" data-name="Moong"
-								data-summary="summary 1" data-price="1.50" data-quantity="1" data-image="images/of.png">Add to
-								Cart</button>
+							<!-- TODO: fix data when add to cart -->
+							<button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="e2" data-name="Moong"
+								data-summary="San pham" data-price="10000" data-quantity="1" data-image="images/of.png">Thêm vào giỏ
+								hàng</button>
 						</div>
 					</div>
 					<div class="clearfix"> </div>
@@ -1096,13 +1019,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 							<div class="clearfix"></div>
 						</div>
-						<h4 class="quick">Quick Overview:</h4>
+						<h4 class="quick">Mô tả:</h4>
 						<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id
 							quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
 						<div class="add-to">
 							<button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="2" data-name="Sunflower Oil"
-								data-summary="summary 2" data-price="9.00" data-quantity="1" data-image="images/of1.png">Add to
-								Cart</button>
+								data-summary="summary 2" data-price="9.00" data-quantity="1" data-image="images/of1.png">Thêm vào giỏ
+								hàng</button>
 						</div>
 					</div>
 					<div class="clearfix"> </div>
@@ -1132,13 +1055,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 							<div class="clearfix"></div>
 						</div>
-						<h4 class="quick">Quick Overview:</h4>
+						<h4 class="quick">Mô tả:</h4>
 						<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id
 							quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
 						<div class="add-to">
 							<button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="3" data-name="Kabuli Chana"
-								data-summary="summary 3" data-price="2.00" data-quantity="1" data-image="images/of2.png">Add to
-								Cart</button>
+								data-summary="summary 3" data-price="2.00" data-quantity="1" data-image="images/of2.png">Thêm vào giỏ
+								hàng</button>
 						</div>
 					</div>
 					<div class="clearfix"> </div>
@@ -1168,13 +1091,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 							<div class="clearfix"></div>
 						</div>
-						<h4 class="quick">Quick Overview:</h4>
+						<h4 class="quick">Mô tả:</h4>
 						<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id
 							quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
 						<div class="add-to">
 							<button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="4" data-name="Soya Chunks"
-								data-summary="summary 4" data-price="3.50" data-quantity="1" data-image="images/of3.png">Add to
-								Cart</button>
+								data-summary="summary 4" data-price="3.50" data-quantity="1" data-image="images/of3.png">Thêm vào giỏ
+								hàng</button>
 						</div>
 					</div>
 					<div class="clearfix"> </div>
@@ -1204,13 +1127,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 							<div class="clearfix"></div>
 						</div>
-						<h4 class="quick">Quick Overview:</h4>
+						<h4 class="quick">Mô tả:</h4>
 						<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id
 							quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
 						<div class="add-to">
 							<button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="5" data-name="Lays"
-								data-summary="summary 5" data-price="0.70" data-quantity="1" data-image="images/of4.png">Add to
-								Cart</button>
+								data-summary="summary 5" data-price="0.70" data-quantity="1" data-image="images/of4.png">Thêm vào giỏ
+								hàng</button>
 						</div>
 					</div>
 					<div class="clearfix"> </div>
@@ -1240,13 +1163,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 							<div class="clearfix"></div>
 						</div>
-						<h4 class="quick">Quick Overview:</h4>
+						<h4 class="quick">Mô tả:</h4>
 						<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id
 							quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
 						<div class="add-to">
 							<button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="6" data-name="Kurkure"
-								data-summary="summary 6" data-price="0.70" data-quantity="1" data-image="images/of5.png">Add to
-								Cart</button>
+								data-summary="summary 6" data-price="0.70" data-quantity="1" data-image="images/of5.png">Thêm vào giỏ
+								hàng</button>
 						</div>
 					</div>
 					<div class="clearfix"> </div>
@@ -1276,13 +1199,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 							<div class="clearfix"></div>
 						</div>
-						<h4 class="quick">Quick Overview:</h4>
+						<h4 class="quick">Mô tả:</h4>
 						<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id
 							quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
 						<div class="add-to">
 							<button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="7" data-name="Popcorn"
-								data-summary="summary 7" data-price="1.00" data-quantity="1" data-image="images/of6.png">Add to
-								Cart</button>
+								data-summary="summary 7" data-price="1.00" data-quantity="1" data-image="images/of6.png">Thêm vào giỏ
+								hàng</button>
 						</div>
 					</div>
 					<div class="clearfix"> </div>
@@ -1312,13 +1235,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 							<div class="clearfix"></div>
 						</div>
-						<h4 class="quick">Quick Overview:</h4>
+						<h4 class="quick">Mô tả:</h4>
 						<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id
 							quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
 						<div class="add-to">
 							<button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="8" data-name="Nuts"
-								data-summary="summary 8" data-price="3.50" data-quantity="1" data-image="images/of7.png">Add to
-								Cart</button>
+								data-summary="summary 8" data-price="3.50" data-quantity="1" data-image="images/of7.png">Thêm vào giỏ
+								hàng</button>
 						</div>
 					</div>
 					<div class="clearfix"> </div>
@@ -1348,13 +1271,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 							<div class="clearfix"></div>
 						</div>
-						<h4 class="quick">Quick Overview:</h4>
+						<h4 class="quick">Mô tả:</h4>
 						<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id
 							quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
 						<div class="add-to">
 							<button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="9" data-name="Banana"
-								data-summary="summary 9" data-price="1.50" data-quantity="1" data-image="images/of8.png">Add to
-								Cart</button>
+								data-summary="summary 9" data-price="1.50" data-quantity="1" data-image="images/of8.png">Thêm vào giỏ
+								hàng</button>
 						</div>
 					</div>
 					<div class="clearfix"> </div>
@@ -1384,13 +1307,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 							<div class="clearfix"></div>
 						</div>
-						<h4 class="quick">Quick Overview:</h4>
+						<h4 class="quick">Mô tả:</h4>
 						<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id
 							quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
 						<div class="add-to">
 							<button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="10" data-name="Onion"
-								data-summary="summary 10" data-price="0.70" data-quantity="1" data-image="images/of9.png">Add to
-								Cart</button>
+								data-summary="summary 10" data-price="0.70" data-quantity="1" data-image="images/of9.png">Thêm vào giỏ
+								hàng</button>
 						</div>
 					</div>
 					<div class="clearfix"> </div>
@@ -1420,13 +1343,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 							<div class="clearfix"></div>
 						</div>
-						<h4 class="quick">Quick Overview:</h4>
+						<h4 class="quick">Mô tả:</h4>
 						<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id
 							quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
 						<div class="add-to">
 							<button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="11" data-name="Bitter Gourd"
-								data-summary="summary 11" data-price="1.00" data-quantity="1" data-image="images/of10.png">Add to
-								Cart</button>
+								data-summary="summary 11" data-price="1.00" data-quantity="1" data-image="images/of10.png">Thêm vào giỏ
+								hàng</button>
 						</div>
 					</div>
 					<div class="clearfix"> </div>
@@ -1456,13 +1379,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 							<div class="clearfix"></div>
 						</div>
-						<h4 class="quick">Quick Overview:</h4>
+						<h4 class="quick">Mô tả:</h4>
 						<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id
 							quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
 						<div class="add-to">
 							<button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="12" data-name="Apples"
-								data-summary="summary 12" data-price="3.50" data-quantity="1" data-image="images/of11.png">Add to
-								Cart</button>
+								data-summary="summary 12" data-price="3.50" data-quantity="1" data-image="images/of11.png">Thêm vào giỏ
+								hàng</button>
 						</div>
 					</div>
 					<div class="clearfix"> </div>
@@ -1492,13 +1415,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 							<div class="clearfix"></div>
 						</div>
-						<h4 class="quick">Quick Overview:</h4>
+						<h4 class="quick">Mô tả:</h4>
 						<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id
 							quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
 						<div class="add-to">
 							<button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="13" data-name="Honey"
-								data-summary="summary 13" data-price="6.00" data-quantity="1" data-image="images/of12.png">Add to
-								Cart</button>
+								data-summary="summary 13" data-price="6.00" data-quantity="1" data-image="images/of12.png">Thêm vào giỏ
+								hàng</button>
 						</div>
 					</div>
 					<div class="clearfix"> </div>
@@ -1528,13 +1451,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 							<div class="clearfix"></div>
 						</div>
-						<h4 class="quick">Quick Overview:</h4>
+						<h4 class="quick">Mô tả:</h4>
 						<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id
 							quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
 						<div class="add-to">
 							<button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="14" data-name="Chocos"
-								data-summary="summary 14" data-price="4.50" data-quantity="1" data-image="images/of13.png">Add to
-								Cart</button>
+								data-summary="summary 14" data-price="4.50" data-quantity="1" data-image="images/of13.png">Thêm vào giỏ
+								hàng</button>
 						</div>
 					</div>
 					<div class="clearfix"> </div>
@@ -1564,13 +1487,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 							<div class="clearfix"></div>
 						</div>
-						<h4 class="quick">Quick Overview:</h4>
+						<h4 class="quick">Mô tả:</h4>
 						<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id
 							quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
 						<div class="add-to">
 							<button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="15" data-name="Oats"
-								data-summary="summary 15" data-price="3.50" data-quantity="1" data-image="images/of14.png">Add to
-								Cart</button>
+								data-summary="summary 15" data-price="3.50" data-quantity="1" data-image="images/of14.png">Thêm vào giỏ
+								hàng</button>
 						</div>
 					</div>
 					<div class="clearfix"> </div>
@@ -1600,13 +1523,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 							<div class="clearfix"></div>
 						</div>
-						<h4 class="quick">Quick Overview:</h4>
+						<h4 class="quick">Mô tả:</h4>
 						<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id
 							quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
 						<div class="add-to">
 							<button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="16" data-name="Bread"
-								data-summary="summary 16" data-price="0.80" data-quantity="1" data-image="images/of15.png">Add to
-								Cart</button>
+								data-summary="summary 16" data-price="0.80" data-quantity="1" data-image="images/of15.png">Thêm vào giỏ
+								hàng</button>
 						</div>
 					</div>
 					<div class="clearfix"> </div>
@@ -1636,13 +1559,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 							<div class="clearfix"></div>
 						</div>
-						<h4 class="quick">Quick Overview:</h4>
+						<h4 class="quick">Mô tả:</h4>
 						<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id
 							quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
 						<div class="add-to">
 							<button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="17" data-name="Moisturiser"
-								data-summary="summary 17" data-price="0.80" data-quantity="1" data-image="images/of16.png">Add to
-								Cart</button>
+								data-summary="summary 17" data-price="0.80" data-quantity="1" data-image="images/of16.png">Thêm vào giỏ
+								hàng</button>
 						</div>
 					</div>
 					<div class="clearfix"> </div>
@@ -1672,13 +1595,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 							<div class="clearfix"></div>
 						</div>
-						<h4 class="quick">Quick Overview:</h4>
+						<h4 class="quick">Mô tả:</h4>
 						<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id
 							quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
 						<div class="add-to">
 							<button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="18" data-name="Lady Finger"
-								data-summary="summary 18" data-price="0.80" data-quantity="1" data-image="images/of17.png">Add to
-								Cart</button>
+								data-summary="summary 18" data-price="0.80" data-quantity="1" data-image="images/of17.png">Thêm vào giỏ
+								hàng</button>
 						</div>
 					</div>
 					<div class="clearfix"> </div>
@@ -1708,13 +1631,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 							<div class="clearfix"></div>
 						</div>
-						<h4 class="quick">Quick Overview:</h4>
+						<h4 class="quick">Mô tả:</h4>
 						<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id
 							quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
 						<div class="add-to">
 							<button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="19" data-name="Satin Ribbon Red"
-								data-summary="summary 19" data-price="0.80" data-quantity="1" data-image="images/of18.png">Add to
-								Cart</button>
+								data-summary="summary 19" data-price="0.80" data-quantity="1" data-image="images/of18.png">Thêm vào giỏ
+								hàng</button>
 						</div>
 					</div>
 					<div class="clearfix"> </div>
@@ -1744,13 +1667,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 							<div class="clearfix"></div>
 						</div>
-						<h4 class="quick">Quick Overview:</h4>
+						<h4 class="quick">Mô tả:</h4>
 						<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id
 							quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
 						<div class="add-to">
 							<button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="20" data-name="Grapes"
-								data-summary="summary 20" data-price="0.80" data-quantity="1" data-image="images/of19.png">Add to
-								Cart</button>
+								data-summary="summary 20" data-price="0.80" data-quantity="1" data-image="images/of19.png">Thêm vào giỏ
+								hàng</button>
 						</div>
 					</div>
 					<div class="clearfix"> </div>
@@ -1780,13 +1703,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 							<div class="clearfix"></div>
 						</div>
-						<h4 class="quick">Quick Overview:</h4>
+						<h4 class="quick">Mô tả:</h4>
 						<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id
 							quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
 						<div class="add-to">
 							<button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="21" data-name="Clips"
-								data-summary="summary 21" data-price="0.80" data-quantity="1" data-image="images/of20.png">Add to
-								Cart</button>
+								data-summary="summary 21" data-price="0.80" data-quantity="1" data-image="images/of20.png">Thêm vào giỏ
+								hàng</button>
 						</div>
 					</div>
 					<div class="clearfix"> </div>
@@ -1816,13 +1739,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 							<div class="clearfix"></div>
 						</div>
-						<h4 class="quick">Quick Overview:</h4>
+						<h4 class="quick">Mô tả:</h4>
 						<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id
 							quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
 						<div class="add-to">
 							<button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="22" data-name="Conditioner"
-								data-summary="summary 22" data-price="0.80" data-quantity="1" data-image="images/of21.png">Add to
-								Cart</button>
+								data-summary="summary 22" data-price="0.80" data-quantity="1" data-image="images/of21.png">Thêm vào giỏ
+								hàng</button>
 						</div>
 					</div>
 					<div class="clearfix"> </div>
@@ -1852,13 +1775,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 							<div class="clearfix"></div>
 						</div>
-						<h4 class="quick">Quick Overview:</h4>
+						<h4 class="quick">Mô tả:</h4>
 						<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id
 							quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
 						<div class="add-to">
 							<button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="23" data-name="Cleaner"
-								data-summary="summary 23" data-price="0.80" data-quantity="1" data-image="images/of22.png">Add to
-								Cart</button>
+								data-summary="summary 23" data-price="0.80" data-quantity="1" data-image="images/of22.png">Thêm vào giỏ
+								hàng</button>
 						</div>
 					</div>
 					<div class="clearfix"> </div>
@@ -1888,13 +1811,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 							<div class="clearfix"></div>
 						</div>
-						<h4 class="quick">Quick Overview:</h4>
+						<h4 class="quick">Mô tả:</h4>
 						<p class="quick_desc"> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id
 							quod mazim placerat facer possim assum. Typi non habent claritatem insitam; es</p>
 						<div class="add-to">
 							<button class="btn btn-danger my-cart-btn my-cart-btn1 " data-id="24" data-name="Gel"
-								data-summary="summary 24" data-price="0.80" data-quantity="1" data-image="images/of23.png">Add to
-								Cart</button>
+								data-summary="summary 24" data-price="0.80" data-quantity="1" data-image="images/of23.png">Thêm vào giỏ
+								hàng</button>
 						</div>
 					</div>
 					<div class="clearfix"> </div>
