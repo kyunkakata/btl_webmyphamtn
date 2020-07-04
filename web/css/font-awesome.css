@@ -4,6 +4,7 @@
  */
 /* FONT PATH
  * -------------------------- */
+ @import url("//use.fontawesome.com/releases/v5.6.1/css/all.css'");
 @font-face {
   font-family: 'FontAwesome';
   src: url('../fonts/fontawesome-webfont.eot?v=4.5.0');

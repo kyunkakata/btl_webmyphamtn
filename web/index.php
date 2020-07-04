@@ -7,7 +7,9 @@
 		<?php include_once "css/bootstrap.css"  ?>
 		<?php include_once "css/jstarbox.css"  ?>
 		<?php include_once "css/style.css"  ?>
+		<?php include_once "css/font-awesome.css" ?>
 	</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- for-mobile-apps -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -21,11 +23,11 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<!-- Custom Theme files -->
 	<link href="css/style.css" rel='stylesheet' type='text/css' />
 	<!-- js -->
-	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="web/js/jquery-1.11.1.min.js"></script>
 	<!-- //js -->
 	<!-- start-smoth-scrolling -->
-	<script type="text/javascript" src="js/move-top.js"></script>
-	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript" src="web/js/move-top.js"></script>
+	<script type="text/javascript" src="web/js/easing.js"></script>
 	<script type="text/javascript">
 		jQuery(document).ready(function ($) {
 			$(".scroll").click(function (event) {
@@ -39,7 +41,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<link href='//fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
 	<!--- start-rate---->
-	<script src="js/jstarbox.js"></script>
+	<script src="web/js/jstarbox.js"></script>
 	<link rel="stylesheet" href="css/jstarbox.css" type="text/css" media="screen" charset="utf-8" />
 	<script type="text/javascript">
 		jQuery(function () {
@@ -140,8 +142,8 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			<input type="submit" value=" ">
 		</form>
 	</div>
-	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
-	<script src="js/jquery.vide.min.js"></script>
+	<script>window.jQuery || document.write('<script src="web/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+	<script src="web/js/jquery.vide.min.js"></script>
 
 	<!--content-->
 	<div class="content-top ">
@@ -167,35 +169,34 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 						<div class=" con-w3l">
 							<?php 
 								// var_dump($result);
-								for ($i=0; $i < 3; $i++) { 
+								for ($i=0; $i < 4; $i++) { 
 									?>
 									<div class="col-md-3 m-wthree">
 								<!-- TODO: This is base product infomation -->
 								<div class="col-m">
 									<a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img">
 										<img
-											src="http://myphamthainguyen.vn/media/catalog/product/cache/1/small_image/260x260/8edc98e65442fea70c4ccd9d62a6e84e/b/e/beautyday-mat-na-ngu-innisfree-whitening-pore-sleeping-pack-.jpg"
-											class="img-responsive" alt="" width="auto" height="auto">
+											src="<?php echo $result[$i]['image'] ?>"
+											class="img-responsive" alt="" width="auto" height="200">
 										<div class="offer">
 											<p><span>Bán chạy</span></p>
 										</div>
 									</a>
 									<div class="mid-1">
 										<div class="women">
-											<h6><a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img">Moong</a></h6>
+											<h6><a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img" style="-webkit-line-clamp: 2;-webkit-box-orient: vertical;"><?php echo $result[$i]['name'] ?></a></h6>
 										</div>
 										<div class="mid-2">
 											<p>
-												<!-- <label>$2.00</label> -->
-												<em class="item_price">10.000.000 đ</em>
-												<em class="item_bought_amount" style="float: right;">16 lượt đã mua</em>
+												<em class="item_price"><?php echo $result[$i]['price'] ?> đ</em>
+												<em class="item_bought_amount" style="float: right;"><?php echo $result[$i]['buy_times'] ?> lượt đã mua</em>
 											</p>
 											<div class="clearfix"></div>
 										</div>
 										<!-- TODO: Fix data add to cart here -->
 										<div class="add">
-											<button class="btn btn-danger my-cart-btn my-cart-b " data-id="1" data-name="Moong"
-												data-summary="summary 1" data-price="10000000" data-quantity="1" data-image="images/of.png">Thêm
+											<button class="btn btn-danger my-cart-btn my-cart-b " data-id="1" data-name="<?php echo $result[$i]['name']?>"
+												data-summary="summary 1" data-price="<?php echo $result[$i]['price'] ?>" data-quantity="1" data-image="<?php echo $result[$i]['image'] ?>">Thêm
 												vào
 												giỏ hàng</button>
 										</div>
@@ -207,87 +208,6 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 								}
 							?>
 							
-							<div class="col-md-3 m-wthree">
-								<div class="col-m">
-									<a href="#" data-toggle="modal" data-target="#myModal2" class="offer-img">
-										<img src="images/of1.png" class="img-responsive" alt="">
-										<div class="offer">
-											<p><span>Offer</span></p>
-										</div>
-									</a>
-									<div class="mid-1">
-										<div class="women">
-											<h6><a href="single.html">Sunflower Oil</a>(5 kg)</h6>
-										</div>
-										<div class="mid-2">
-											<p><label>$10.00</label><em class="item_price">$9.00</em></p>
-											<div class="block">
-												<div class="starbox small ghosting"> </div>
-											</div>
-											<div class="clearfix"></div>
-										</div>
-										<div class="add">
-											<button class="btn btn-danger my-cart-btn my-cart-b" data-id="2" data-name="Sunflower Oil"
-												data-summary="summary 2" data-price="9.00" data-quantity="1" data-image="images/of1.png">Thêm
-												vào giỏ hàng</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3 m-wthree">
-								<div class="col-m">
-									<a href="#" data-toggle="modal" data-target="#myModal3" class="offer-img">
-										<img src="images/of2.png" class="img-responsive" alt="">
-										<div class="offer">
-											<p><span>Offer</span></p>
-										</div>
-									</a>
-									<div class="mid-1">
-										<div class="women">
-											<h6><a href="single.html">Kabuli Chana</a>(1 kg)</h6>
-										</div>
-										<div class="mid-2">
-											<p><label>$3.00</label><em class="item_price">$2.00</em></p>
-											<div class="block">
-												<div class="starbox small ghosting"> </div>
-											</div>
-											<div class="clearfix"></div>
-										</div>
-										<div class="add">
-											<button class="btn btn-danger my-cart-btn my-cart-b" data-id="3" data-name="Kabuli Chana"
-												data-summary="summary 3" data-price="2.00" data-quantity="1" data-image="images/of2.png">Thêm
-												vào giỏ hàng</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-3 m-wthree">
-								<div class="col-m">
-									<a href="#" data-toggle="modal" data-target="#myModal4" class="offer-img">
-										<img src="images/of3.png" class="img-responsive" alt="">
-										<div class="offer">
-											<p><span>Offer</span></p>
-										</div>
-									</a>
-									<div class="mid-1">
-										<div class="women">
-											<h6><a href="single.html">Soya Chunks</a>(1 kg)</h6>
-										</div>
-										<div class="mid-2">
-											<p><label>$4.00</label><em class="item_price">$3.50</em></p>
-											<div class="block">
-												<div class="starbox small ghosting"> </div>
-											</div>
-											<div class="clearfix"></div>
-										</div>
-										<div class="add">
-											<button class="btn btn-danger my-cart-btn my-cart-b" data-id="4" data-name="Soya Chunks"
-												data-summary="summary 4" data-price="3.50" data-quantity="1" data-image="images/of3.png">Thêm
-												vào giỏ hàng</button>
-										</div>
-									</div>
-								</div>
-							</div>
 							<div class="clearfix"></div>
 						</div>
 					</div>
@@ -928,9 +848,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 	<!-- //smooth scrolling -->
 	<!-- for bootstrap working -->
-	<script src="js/bootstrap.js"></script>
+	<script src="web/js/bootstrap.js"></script>
 	<!-- //for bootstrap working -->
-	<script type='text/javascript' src="js/jquery.mycart.js"></script>
+	<script type='text/javascript' src="web/js/jquery.mycart.js"></script>
 	<script type="text/javascript">
 		$(function () {
 

@@ -308,7 +308,14 @@ figure {
 img {
   vertical-align: middle;
 }
-.img-responsive,
+.img-responsive {
+  width: auto;
+  max-height: 100px;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
 .thumbnail > img,
 .thumbnail a > img,
 .carousel-inner > .item > img,
