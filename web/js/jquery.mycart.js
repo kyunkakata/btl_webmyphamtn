@@ -193,7 +193,7 @@
         '<table class="table table-hover table-responsive" id="' + idCartTable + '"></table>' +
         '</div>' +
         '<div class="modal-footer">' +
-        '<button type="button" class="btn btn-default classCashOut" data-dismiss="modal">Thanh toán</button>' +
+        '<button type="button" class="my-cash-out" data-dismiss="modal">Thanh toán</button>' +
 
         '</div>' +
         '</div>' +
@@ -321,6 +321,13 @@
     });
     $(document).on('click', "." + classCashOut, function () {
       console.log('cashouffft');
+      let data  = ProductManager.getAllProducts();
+      post('../btl_webmyphamtn/index.php?task=action_cashout',{
+        data:JSON.stringify(data),
+        price: ProductManager.getTotalPrice()
+      });
+      ProductManager.clearProduct();
+
     })
 
     $("." + classCheckoutCart).click(function () {
@@ -338,6 +345,28 @@
 
   }
 
+  var post = function(path, params, method='post') {
+
+    // The rest of this code assumes you are not using a library.
+    // It can be made less wordy if you use one.
+    const form = document.createElement('form');
+    form.method = method;
+    form.action = path;
+  
+    for (const key in params) {
+      if (params.hasOwnProperty(key)) {
+        const hiddenField = document.createElement('input');
+        hiddenField.type = 'hidden';
+        hiddenField.name = key;
+        hiddenField.value = params[key];
+  
+        form.appendChild(hiddenField);
+      }
+    }
+  
+    document.body.appendChild(form);
+    form.submit();
+  }
 
   var MyCart = function (target, userOptions) {
     /*

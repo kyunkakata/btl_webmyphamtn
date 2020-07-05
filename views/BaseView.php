@@ -12,8 +12,8 @@ class BaseView {
 		require "web/register.php";
 	}
 
-	public function DetailProduct(){
-		require "templates/DetailProduct/DetailProduct.php";
+	public function history_order($result){
+		require "web/HistoryOrder.php";
 	}
 
 	public function CartList() {

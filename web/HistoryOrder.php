@@ -157,12 +157,12 @@
          	</div>
          </div>
          </div> -->
-      <div class="search-form">
+      <!-- <div class="search-form">
       <form action="" method="post">
       <input type="text" placeholder="Tìm kiếm sản phẩm theo tên, thương hiệu..." name="search">
       <input type="submit" value=" ">
       </form>
-      </div>
+      </div> -->
       <script>
          window.jQuery || document.write('<script src="web/js/vendor/jquery-1.11.1.min.js"><\/script>')
       </script>
@@ -178,17 +178,7 @@
       </div>
       </div>
       <div class="tab-head ">
-      <nav class="nav-sidebar">
-      <ul class="nav tabs ">
-      <li class="active"><a href="#"
-         onclick="javascript:window.location.search+='&filter=best_seller'" data-toggle="tab">Bán
-      chạy</a></li>
-      <li class=""><a href="#" onclick="javascript:window.location.search+='&filter=price_asc'"
-         data-toggle="tab">Giá từ thấp -> cao</a></li>
-      <li class=""><a href="#" onclick="javascript:window.location.search+='&filter=price_desc'"
-         data-toggle="tab">Giá từ cao -> thấp</a></li>
-      </ul>
-      </nav>
+      
       <!-- TODO: fix data here -->
       <div class=" tab-content tab-content-t ">
       <div class="tab-pane active text-style" id="tab1">
@@ -201,61 +191,52 @@
          }
          ?>
       <?php 
-         // var_dump($result);
-         $max_length = 4;
-         if($max_length > count($result)){
-         	$max_length = count($result);
-         }
-         for ($i=0; $i < $max_length; $i++) { 
-         	?>
-      <div class="col-md-3 m-wthree">
-      <!-- TODO: This is base product infomation -->
-      <div class="col-m">
-      <a href="#" data-toggle="modal" data-target="#myModal<?php echo $result[$i]['id'] ?>" class="offer-img">
-      <img src="<?php echo $result[$i]['image'] ?>" class="img-responsive" alt=""
-         width="auto" height="200">
-      <?php
-         if ($result[$i]['buy_times'] >= 50) {
-         ?>
-      <div class="offer">
-      <p><span>Bán chạy</span></p>
-      </div>
-      <?php
-         }
-         ?>
-      </a>
-      <div class="mid-1">
-      <div class="women">
-      <h6><a href="#" data-toggle="modal" data-target="#myModal<?php echo $result[$i]['id'] ?>"
-         class="offer-img"
-         style="-webkit-line-clamp: 2;-webkit-box-orient: vertical;"><?php echo $result[$i]['name'] ?></a>
-      </h6>
-      </div>
-      <div class="mid-2">
-      <p>
-      <em class="item_price"><?php echo $result[$i]['price'] ?> đ</em>
-      <em class="item_bought_amount"
-         style="float: right;"><?php echo $result[$i]['buy_times'] ?> lượt đã
-      mua</em>
-      </p>
-      <div class="clearfix"></div>
-      </div>
-      <!-- TODO: Fix data add to cart here -->
-      <div class="add">
-      <button class="btn btn-danger my-cart-btn my-cart-b "
-         data-id="<?php echo $result[$i]['id'] ?>"
-         data-name="<?php echo $result[$i]['name']?>"
-         data-summary="summary <?php echo $result[$i]['id'] ?>"
-         data-price="<?php echo $result[$i]['price'] ?>" data-quantity="1"
-         data-image="<?php echo $result[$i]['image'] ?>">Thêm
-      vào
-      giỏ hàng</button>
-      </div>
-      </div>
-      </div>
-      </div>
-      <?php
-         }
+             ?>
+            <table style="padding:5px;border: 1px solid white;color: white; width: 100%">
+			<tr  style="padding:5px;border: 1px solid white;color: white; height: 50px;text-align: center;">
+				<th style="padding:5px;border: 1px solid white;color: white;text-align: center">Id</th>
+				<th  style="padding:5px;border: 1px solid white;color: white;text-align: center">Các sản phẩm đã đặt</th>
+                <th style="padding:5px;border: 1px solid white;color: white;text-align: center">Đặt lúc</th>
+                <th style="padding:5px;border: 1px solid white;color: white;text-align: center">Tổng giá tiền</th>
+				<th style="padding:5px;border: 1px solid white;color: white;text-align: center">Tên người nhận</th>
+                <th style="padding:5px;border: 1px solid white;color: white;text-align: center">Địa chỉ người nhận</th>
+                <th style="padding:5px;border: 1px solid white;color: white;text-align: center">Trạng thái</th>
+			</tr>
+				<?php 
+                    $no = 0;
+                foreach ($result as $value) {
+                    $no++;
+                    ?>
+				<tr>
+					<td  style="border: 1px solid white;color: white;text-align: center"><?php echo $no  ?></td>
+                    <td  style="border: 1px solid white;color: white;text-align: center">
+                    <ul class="card">
+                    
+                    <?php 
+                        $list_product = "";
+                        $data =json_decode($value['list_data'], true);
+                        for($i = 0; $i < count($data); $i++){
+                            $amount = $data[$i]['quantity'];
+                            $name = $data[$i]['name'];
+                            $list_product = "Tên: $name ; Số Lượng: $amount";
+                            echo "<li style=\"color:white; margin-top:10px\">$list_product</li>";
+                        }
+                    ?>
+                    </ul>
+
+                </td>
+                    <td  style="border: 1px solid white;color: white;text-align: center"><?php echo $value['created_at'] ?></td>
+                    <td  style="border: 1px solid white;color: white;text-align: center"><?php echo $value['total_price'] ?> đồng</td>
+                    <td  style="border: 1px solid white;color: white;text-align: center"><?php echo $value['real_name'] ?></td>
+                    <td  style="border: 1px solid white;color: white;text-align: center"><?php echo $value['address'] ?></td>
+                    <td  style="border: 1px solid white;color: white;text-align: center"><?php echo $value['status'] ?></td>
+				</tr>
+                <?php 
+                }
+
+				 ?>
+        </table>
+        <?php
          ?>
       <div class="clearfix"></div>
       </div>
@@ -268,90 +249,6 @@
       <div class="separator" style="margin-top: 50px;" />
       <!-- Carousel
          ================================================== -->
-      <div id="myCarousel" class="carousel-slide" data-ride="carousel">
-      <!-- Indicators -->
-      <!-- <ol class="carousel-indicators">
-         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-         <li data-target="#myCarousel" data-slide-to="1"></li>
-         <li data-target="#myCarousel" data-slide-to="2"></li>
-         </ol> -->
-      <div class="carousel-inner" role="listbox">
-      <div class="item active">
-      <a href="#"> <img class="first-slide" src="http://myphamthainguyen.vn/media/icycle/g/t/gtr.jpg"
-         alt="First slide"></a>
-      </div>
-      <div class="item">
-      <a href="#"> <img class="second-slide " src="http://myphamthainguyen.vn/media/icycle/n/o/noel.png"
-         alt="Second slide"></a>
-      </div>
-      <div class="item">
-      <a href="#"><img class="third-slide " src="http://myphamthainguyen.vn/media/icycle/g/_/g.jpg"
-         alt="Third slide"></a>
-      </div>
-      </div>
-      </div><!-- /.carousel -->
-      <!--content-->
-      <div class="product">
-      <div class="container">
-      <div class="spec ">
-      <div class="ser-t">
-      <b></b>
-      <span><i></i></span>
-      <b class="line"></b>
-      </div>
-      </div>
-      <div class=" con-w3l">
-      <?php 
-         // var_dump($result);
-         for ($i=4; $i < count($result); $i++) { 
-         	?>
-      <div class="col-md-3 m-wthree">
-      <!-- TODO: This is base product infomation -->
-      <div class="col-m">
-      <a href="#" data-toggle="modal" data-target="#myModal<?php echo $result[$i]['id']?>" class="offer-img">
-      <img src="<?php echo $result[$i]['image'] ?>" class="img-responsive" alt="" width="auto"
-         height="200">
-      <?php 
-         if ($result[$i]['buy_times'] >= 50) {
-         	?>
-      <div class="offer">
-      <p><span>Bán chạy</span></p>
-      </div>
-      <?php
-         }
-         ?>
-      </a>
-      <div class="mid-1">
-      <div class="women">
-      <h6><a href="#" data-toggle="modal" data-target="#myModal<?php echo $result[$i]['id']?>" class="offer-img"
-         style="-webkit-line-clamp: 2;-webkit-box-orient: vertical;"><?php echo $result[$i]['name'] ?></a>
-      </h6>
-      </div>
-      <div class="mid-2">
-      <p>
-      <em class="item_price"><?php echo $result[$i]['price'] ?> đ</em>
-      <em class="item_bought_amount"
-         style="float: right;"><?php echo $result[$i]['buy_times'] ?> lượt đã mua</em>
-      </p>
-      <div class="clearfix"></div>
-      </div>
-      <!-- TODO: Fix data add to cart here -->
-      <div class="add">
-      <button class="btn btn-danger my-cart-btn my-cart-b "
-         data-id="<?php echo $result[$i]['id']?>"
-         data-name="<?php echo $result[$i]['name']?>"
-         data-summary="summary <?php echo $result[$i]['id'] ?>"
-         data-price="<?php echo $result[$i]['price'] ?>" data-quantity="1"
-         data-image="<?php echo $result[$i]['image'] ?>">Thêm
-      vào
-      giỏ hàng</button>
-      </div>
-      </div>
-      </div>
-      </div>
-      <?php
-         }
-         ?>
       <div class="clearfix"></div>
       </div>
       </div>

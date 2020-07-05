@@ -7,6 +7,7 @@ class BaseModel extends Model{
 		return $this->db->select($query);
 		
 	}
+	
 	public function list_id($table,$cond){
 		$query="Select * from $table where $cond";
 		return $this->db->select($query);
@@ -22,6 +23,6 @@ class BaseModel extends Model{
     }
     
     public function query($query){
-        return $this->db->query($query);
+        return $this->db->select($query);
     }
 }

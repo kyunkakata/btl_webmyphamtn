@@ -95,10 +95,10 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			</div>
 			<div class="head-t">
 				<ul class="card">
-					<li><a href="http://localhost/btl_webmyphamtn/index.php?task=login"><i class="fa fa-user" aria-hidden="true"></i>Đăng nhập</a></li>
-					<li><a href="register.html"><i class="fa fa-arrow-right" aria-hidden="true"></i>Đăng kí</a></li>
-					<li><a href="about.html"><i class="fa fa-file-text-o" aria-hidden="true"></i>Về chúng tôi</a></li>
-				</ul>
+				<li><a href="../btl_webmyphamtn/index.php?task=login"><i class="fa fa-user"
+               aria-hidden="true"></i>Đăng nhập</a></li>
+            <li><a href="../btl_webmyphamtn/index.php?task=register"><i class="fa fa-arrow-right"
+               aria-hidden="true"></i>Đăng kí</a></li>				</ul>
 			</div>
 
 
@@ -119,13 +119,16 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 					</div>
 					<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
-						<ul class="nav navbar-nav ">
-							<li><a href="index.php" class="hyper "><span>Trang chủ</span></a></li>
-							<li><a href="kitchen.html" class="hyper"> <span>Trang điểm</span></a></li>
-							<li><a href="hold.html" class="hyper"> <span>Chăm sóc da</span></a></li>
-							<li><a href="offer.html" class="hyper"> <span>Chăm sóc toàn thân</span></a></li>
-							<li><a href="contact.html" class="hyper"> <span>Thương hiệu & xuất xứ</span></a></li>
-						</ul>\
+					<ul class="nav navbar-nav ">
+            <li><a href="../btl_webmyphamtn/index.php?task=index" class="hyper "><span>Trang
+            chủ</span></a></li>
+            <li><a href="../btl_webmyphamtn/index.php?task=index&product_type=trang_diem" class="hyper">
+            <span>Trang điểm</span></a></li>
+            <li><a href="../btl_webmyphamtn/index.php?task=index&product_type=cham_soc_da"
+               class="hyper"> <span>Chăm sóc da</span></a></li>
+            <li><a href="../btl_webmyphamtn/index.php?task=index&product_type=cham_soc_toan_than"
+               class="hyper"> <span>Chăm sóc toàn thân</span></a></li>
+            </ul>
 					</div>
 				</nav>
 				<div class="cart">

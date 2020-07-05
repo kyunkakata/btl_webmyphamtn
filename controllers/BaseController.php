@@ -28,7 +28,7 @@ public function action_login() {
     $name = $_POST['Name'];
     $password = $_POST['Password'];
     $cond="`name`= '$name' AND `password` = '$password';";
-    var_dump($cond);
+    // var_dump($cond);
     $result = $this->model->list_id('user', $cond);
     $user_id = $result[0]['id'];
     if(count($result) == 0){
@@ -70,7 +70,42 @@ public function action_register() {
 }
 
 public function action_cashout() {
+    $message = "";
 
+    if(isset($_POST['data']) && isset($_POST['price'])){
+        if(!isset($_COOKIE['user_id'])){
+            // var_dump('true');
+            $message = 'Bạn chưa đăng nhập. Vui lòng đăng nhập để thanh toán đơn hàng.';
+        } else {
+            $user_id = $_COOKIE['user_id'];
+            $total_price = $_POST['price'];
+            $data = array(
+                'list_data' => $_POST['data'],
+                'user_id' => $user_id,
+                'total_price' => $total_price,
+                'status' => 'Chờ xác nhận',
+            );
+            $result = $this->model->add('tbl_order', $data);
+        }
+    } else {
+        $message = "Có lỗi xảy ra. Vui lòng thử lại sau";
+    }
+    if(strlen($message) > 0) {
+
+        echo "<script type='text/javascript'>alert('$message');</script>";
+        return $this->index();
+    } else {
+        // chuyen toi trang lich su don hang
+        header("Location: index.php?task=history_order");
+    }
+}
+
+public function history_order() {
+    $user_id = $_COOKIE['user_id'];
+    $query = "SELECT * FROM `tbl_order`, `user` WHERE `user`.`id` = `tbl_order`.`user_id` AND `tbl_order`.`user_id` = '$user_id'";
+    $result = $this->model->query($query);
+    // var_dump($result);
+    return $this->view->history_order($result);
 }
 
 public function redirect($target) {
@@ -102,7 +137,7 @@ public function index() {
             $cond = " `name` LIKE '%$searchField%';";
         }
     }
-    var_dump($cond);
+    // var_dump($cond);
 
     $result = $this->model->list_id('product', $cond);
     return $this->view->index($result);
