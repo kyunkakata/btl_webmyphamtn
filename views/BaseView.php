@@ -8,8 +8,8 @@ class BaseView {
 		require "web/index.php";
 	}
 	
-	public function HomePage() {
-		require "templates/HomePage/HomePage.php";
+	public function register() {
+		require "web/register.php";
 	}
 
 	public function DetailProduct(){

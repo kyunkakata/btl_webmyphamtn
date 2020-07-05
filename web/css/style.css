@@ -628,6 +628,7 @@ ul.nav.tabs {
   overflow: hidden;
   max-height: 3.6em;
   line-height: 1.8em;
+  height: 3.6em;
 }
 .mid-1 h6 a {
     color: #000000;
@@ -681,6 +682,7 @@ ul.nav.tabs {
     padding: 1em;
     border: 1px solid #B2B2B2;
     height: 400px;
+    margin-top: 10px;
     background-color: #f0f0f0;
 }
 .offer-img{

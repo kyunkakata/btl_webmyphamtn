@@ -168,6 +168,7 @@
     var classProductQuantity = options.classProductQuantity;
     var classProductRemove = options.classProductRemove;
     var classCheckoutCart = options.classCheckoutCart;
+    var classCashOut = 'my-cash-out';
 
     var idCartModal = 'my-cart-modal';
     var idCartTable = 'my-cart-table';
@@ -192,13 +193,17 @@
         '<table class="table table-hover table-responsive" id="' + idCartTable + '"></table>' +
         '</div>' +
         '<div class="modal-footer">' +
-        '<button type="button" class="btn btn-default" data-dismiss="modal">Thanh toán</button>' +
+        '<button type="button" class="btn btn-default classCashOut" data-dismiss="modal">Thanh toán</button>' +
 
         '</div>' +
         '</div>' +
         '</div>' +
         '</div>'
       );
+    }
+
+    var clickCashOut = function () {
+      console.log('Casfhweofw out.')
     }
 
     var drawTable = function () {
@@ -314,6 +319,9 @@
         $cartBadge.text(ProductManager.getTotalQuantity());
       });
     });
+    $(document).on('click', "." + classCashOut, function () {
+      console.log('cashouffft');
+    })
 
     $("." + classCheckoutCart).click(function () {
       var products = ProductManager.getAllProducts();

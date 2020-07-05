@@ -2,13 +2,16 @@
 <html>
 
 <head>
-	<title>Mỹ Phẩm Thái Nguyên | Contact </title>
+	<title>Mỹ Phẩm Thái Nguyên | Đăng ký </title>
+	<style>
+    /* for PHP work */
+    <?php include_once "css/bootstrap.css"?><?php include_once "css/jstarbox.css"?><?php include_once "css/style.css"?><?php include_once "css/font-awesome.css"?>
+	</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- for-mobile-apps -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta property="og:title" content="Vide" />
-	<meta name="keywords" content="Cửa hàng Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<!-- //for-mobile-apps -->
@@ -107,7 +110,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 							<li><a href="hold.html" class="hyper"> <span>Chăm sóc da</span></a></li>
 							<li><a href="offer.html" class="hyper"> <span>Chăm sóc toàn thân</span></a></li>
 							<li><a href="contact.html" class="hyper"> <span>Thương hiệu & xuất xứ</span></a></li>
-						</ul>
+						</ul>\
 					</div>
 				</nav>
 				<div class="cart">
@@ -124,144 +127,61 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<!--banner-->
 	<div class="banner-top">
 		<div class="container">
-			<h3>Contact</h3>
-			<h4><a href="index.php">Home</a><label>/</label>Contact</h4>
+			<h3>Đăng ký</h3>
+			<h4><a href="index.php">Trang chủ</a><label>/</label>Đăng ký</h4>
 			<div class="clearfix"> </div>
 		</div>
 	</div>
 
-	<!-- contact -->
-	<div class="contact">
-		<div class="container">
-			<div class="spec ">
-				<h3>Contact</h3>
-				<div class="ser-t">
-					<b></b>
-					<span><i></i></span>
-					<b class="line"></b>
-				</div>
-			</div>
-			<div class=" contact-w3">
-				<div class="col-md-5 contact-right">
-					<img src="images/cac.jpg" class="img-responsive" alt="">
-					<iframe
-						src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d2482.432383990807!2d0.028213999961443994!3d51.52362882484525!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1423469959819"
-						style="border:0"></iframe>
-				</div>
-				<div class="col-md-7 contact-left">
-					<h4>Contact Information</h4>
-					<p> Nemo enim ipsam voluptatem quia voluptas sit aspernatur
-						aut odit aut fugit, sed quia consequuntur magni dolores eos
-						qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-						est, qui dolorem ipsum quia dolor sit amet, consectetur</p>
-					<ul class="contact-list">
-						<li> <i class="fa fa-map-marker" aria-hidden="true"></i> 756 Global Place, New York.</li>
-						<li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:example@mail.com">mail@example.com</a>
-						</li>
-						<li> <i class="fa fa-phone" aria-hidden="true"></i>+123 2222 222</li>
-					</ul>
-					<div id="container">
-						<!--Horizontal Tab-->
-						<div id="parentHorizontalTab">
-							<ul class="resp-tabs-list hor_1">
-								<li><i class="fa fa-envelope" aria-hidden="true"></i></li>
-								<li> <i class="fa fa-map-marker" aria-hidden="true"></i> </span></li>
-								<li> <i class="fa fa-phone" aria-hidden="true"></i></li>
-							</ul>
-							<div class="resp-tabs-container hor_1">
-								<div>
-									<form action="#" method="post">
-										<input type="text" value="Name" name="Name" onfocus="this.value = '';"
-											onblur="if (this.value == '') {this.value = 'Name';}" required="">
-										<input type="email" value="Email" name="Email" onfocus="this.value = '';"
-											onblur="if (this.value == '') {this.value = 'Email';}" required="">
-										<textarea name="Message..." onfocus="this.value = '';"
-											onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
-										<input type="submit" value="Submit">
-									</form>
-								</div>
-								<div>
-									<div class="map-grid">
-										<h5>Our Branches</h5>
-										<ul>
-											<li><i class="fa fa-arrow-right" aria-hidden="true"></i>756 Global Place, New York.</li>
-											<li><i class="fa fa-arrow-right" aria-hidden="true"></i>889 diamond street, USA.</li>
-											<li><i class="fa fa-arrow-right" aria-hidden="true"></i>756 global Place, New York.</li>
-											<li><i class="fa fa-arrow-right" aria-hidden="true"></i>889 diamond street, USA.</li>
-										</ul>
-									</div>
-								</div>
-								<div>
-									<div class="map-grid">
-										<h5>Contact Me Through</h5>
-										<ul>
-											<li>Mobile No : +123 456 7890</li>
-											<li>Office No : +123 222 2222</li>
-											<li>Home No : +123 456 7890</li>
-											<li>Fax No : +123 456 7890</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
+	<!--login-->
+
+	<div class="login">
+		<div class="main-agileits">
+			<div class="form-w3agile form1">
+				<h3>Đăng ký</h3>
+				<form action="http://localhost/btl_webmyphamtn/index.php?task=action_register" method="post">
+					<div class="key">
+						<i class="fa fa-user" aria-hidden="true"></i>
+						<input type="text" value="Họ và tên" name="real_name" onfocus="this.value = '';"
+							onblur="if (this.value == '') {this.value = 'Họ và tên';}" required="">
+						<div class="clearfix"></div>
 					</div>
-
-					<!--Plug-in Initialisation-->
-					<script type="text/javascript">
-						$(document).ready(function () {
-							//Horizontal Tab
-							$('#parentHorizontalTab').easyResponsiveTabs({
-								type: 'default', //Types: default, vertical, accordion
-								width: 'auto', //auto or any width like 600px
-								fit: true, // 100% fit in a container
-								tabidentify: 'hor_1', // The tab groups identifier
-								activate: function (event) { // Callback function if tab is switched
-									var $tab = $(this);
-									var $info = $('#nested-tabInfo');
-									var $name = $('span', $info);
-									$name.text($tab.text());
-									$info.show();
-								}
-							});
-
-							// Child Tab
-							$('#ChildVerticalTab_1').easyResponsiveTabs({
-								type: 'vertical',
-								width: 'auto',
-								fit: true,
-								tabidentify: 'ver_1', // The tab groups identifier
-								activetab_bg: '#fff', // background color for active tabs in this group
-								inactive_bg: '#F5F5F5', // background color for inactive tabs in this group
-								active_border_color: '#c1c1c1', // border color for active tabs heads in this group
-								active_content_border_color: '#5AB1D0' // border color for active tabs contect in this group so that it matches the tab head border
-							});
-
-							//Vertical Tab
-							$('#parentVerticalTab').easyResponsiveTabs({
-								type: 'vertical', //Types: default, vertical, accordion
-								width: 'auto', //auto or any width like 600px
-								fit: true, // 100% fit in a container
-								closed: 'accordion', // Start closed if in accordion view
-								tabidentify: 'hor_1', // The tab groups identifier
-								activate: function (event) { // Callback function if tab is switched
-									var $tab = $(this);
-									var $info = $('#nested-tabInfo2');
-									var $name = $('span', $info);
-									$name.text($tab.text());
-									$info.show();
-								}
-							});
-						});
-					</script>
-
-				</div>
-
-				<div class="clearfix"></div>
+					<div class="key">
+						<i class="fa fa-user" aria-hidden="true"></i>
+						<input type="text" value="Tên đăng nhập" name="name" onfocus="this.value = '';"
+							onblur="if (this.value == '') {this.value = 'Tên đăng nhập';}" required="">
+						<div class="clearfix"></div>
+					</div>
+					<div class="key">
+						<i class="fa fa-user" aria-hidden="true"></i>
+						<input type="text" value="Địa chỉ" name="address" onfocus="this.value = '';"
+							onblur="if (this.value == '') {this.value = 'Địa chỉ';}" required="">
+						<div class="clearfix"></div>
+					</div>
+					<div class="key">
+						<i class="fa fa-user" aria-hidden="true"></i>
+						<input type="text" value="Số điện thoại" name="phone" onfocus="this.value = '';"
+							onblur="if (this.value == '') {this.value = 'Số điện thoại';}" required="">
+						<div class="clearfix"></div>
+					</div>
+					<div class="key">
+						<i class="fa fa-lock" aria-hidden="true"></i>
+						<input type="password" value="Mật khẩu" name="password" onfocus="this.value = '';"
+							onblur="if (this.value == '') {this.value = 'Password';}" required="">
+						<div class="clearfix"></div>
+					</div>
+					<div class="key">
+						<i class="fa fa-lock" aria-hidden="true"></i>
+						<input type="password" value="Mật khẩu" name="Confirm Password" onfocus="this.value = '';"
+							onblur="if (this.value == '') {this.value = 'Password';}" required="">
+						<div class="clearfix"></div>
+					</div>
+					<input type="submit" value="Đăng ký">
+				</form>
 			</div>
+
 		</div>
 	</div>
-	<!-- //contact -->
-
 	<!--footer-->
 	<div class="footer">
 		<div class="container">
@@ -299,18 +219,6 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		</div>
 	</div>
 	<!-- //footer-->
-	<!-- tabs -->
-	<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
-	<script type="text/javascript">
-		$(document).ready(function () {
-			$('#horizontalTab').easyResponsiveTabs({
-				type: 'default', //Types: default, vertical, accordion           
-				width: 'auto', //auto or any width like 600px
-				fit: true   // 100% fit in a container
-			});
-		});				
-	</script>
-	<!-- //tabs -->
 	<!-- smooth scrolling -->
 	<script type="text/javascript">
 		$(document).ready(function () {
@@ -370,7 +278,6 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 		});
 	</script>
-
 
 </body>
 

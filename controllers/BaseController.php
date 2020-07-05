@@ -18,21 +18,10 @@ public function __construct(){
 
 public function login(){
     return $this->view->login();
-    // $name = $_POST['Name'];
-    // $password = $_POST['Password'];
-    // $cond="`name`= '$name' AND `password` = '$password';";
-    // var_dump($cond);
-    // $result = $this->model->list_id('user', $cond);
-    // $user_id = $result[0]['id'];
-    // if(count($result) == 0){
-       
-    //    $this->redirect("http://localhost/btl_webmyphamtn/index.php?task=login?login_result=false");
-    // } else {
-    //     // dang nhap thanh cong
-    //     // $this->redirect("index.php&user_id=$user_id");
-    //     header("Location: index.php?task=index&user_id=$user_id");
-    // }
-    // var_dump($user_id);
+}
+
+public function register(){
+    return $this->view->register();
 }
 
 public function action_login() {
@@ -46,9 +35,42 @@ public function action_login() {
        header("Location: index.php?task=login&login_result=false");
     } else {
         // dang nhap thanh cong
-        // $this->redirect("index.php&user_id=$user_id");
         header("Location: index.php?task=index&user_id=$user_id");
+        setcookie('user_id',$user_id);
+        setcookie('user_name', $result[0]['real_name']);
     }
+}
+
+public function action_logout() {
+    setcookie('user_id','',time() - 1000);
+    setcookie('user_name','',time() - 1000);
+    header("Location: index.php?task=index");
+}
+
+public function action_register() {
+    $error_msg = "";
+    $real_name = $_POST['real_name'];
+    $name = $_POST['name'];
+    $address = $_POST['address'];
+    $password = $_POST['password'];
+    $phone = $_POST['phone'];
+    $data = array(
+        'real_name' => $real_name,
+        'name' => $name,
+        'address' => $address,
+        'password' => $password,
+        'phone_number' => $phone
+    );
+    $result = $this->model->add('user', $data);
+    if(strlen($error_msg) > 0) {
+        header("Location: index.php?task=login&login_result=false");
+    } else {
+        header("Location: index.php?task=login&signup_result=true");
+    }
+}
+
+public function action_cashout() {
+
 }
 
 public function redirect($target) {
@@ -56,7 +78,33 @@ public function redirect($target) {
 }
 
 public function index() {
-    $result = $this->model->list('product');
+    $cond = "1 ";
+   
+    if(isset($_GET['product_type'])) {
+        $productType = $_GET['product_type'];
+        $cond = $cond." AND `tags` = '$productType'";
+    }
+
+    if(isset($_GET['filter'])){
+        $filterType = $_GET['filter'];
+        if($filterType == 'price_asc') {
+            $cond = $cond." GROUP BY `price` ASC";
+        } else if ($filterType == 'price_desc') {
+            $cond = $cond." GROUP BY `price` DESC";
+        } else if ($filterType == 'best_seller') {
+            $cond = $cond." AND `buy_times` >= 50";
+        }
+    }
+    
+    if(isset($_POST['search'])) {
+        $searchField = $_POST['search'];
+        if(strlen ($searchField) > 0){
+            $cond = " `name` LIKE '%$searchField%';";
+        }
+    }
+    var_dump($cond);
+
+    $result = $this->model->list_id('product', $cond);
     return $this->view->index($result);
 }
 

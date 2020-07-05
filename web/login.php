@@ -36,6 +36,10 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		if(loginResult === 'false'){
 			alert('Đăng nhập không thành công. Sai tên đăng nhập hoặc mật khẩu');
 		}
+		const signUpResult = urlParams.get('signup_result');
+		if(signUpResult === 'true'){
+			alert('Đăng kí thành công. Vui lòng đăng nhập tài khoản.');
+		}
 		jQuery(document).ready(function ($) {
 			$(".scroll").click(function (event) {
 				event.preventDefault();
